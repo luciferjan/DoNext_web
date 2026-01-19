@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - DoNext</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <ul class="nav-links">
+                    <li><a href="index.html"><span>Home</span></a></li>
+                    <li><a href="app.html"><span>App</span></a></li>
+                    <li><a href="features.html"><span>Features</span></a></li>
+                    <li><a href="about.html"><span>About</span></a></li>
+                    <li><a href="contact.html" class="active"><span>Contact</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="page-section">
+        <div class="container">
+            <h1 class="page-title">Get In Touch</h1>
+            <p class="page-subtitle">We'd love to hear from you</p>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                <h2>Contact Information</h2>
+    
+            <a href="tel:+919152730741" class="contact-item" style="display: block; text-decoration: none; color: inherit; cursor: pointer;">
+                <h3><i class="ri-phone-fill"></i> Call Me</h3>
+                <p>+91 9152730741</p>
+            </a>
+
+            <a href="mailto:alankarjan123@gmail.com" class="contact-item" style="display: block; text-decoration: none; color: inherit; cursor: pointer;">
+                <h3><i class="ri-mail-send-fill"></i> Email</h3>
+                <p>alankarjan123@gmail.com</p>
+            </a>
+
+            <a href="https://wa.me/919152730741" target="_blank" class="contact-item" style="display: block; text-decoration: none; color: inherit; cursor: pointer;">
+                <h3><i class="ri-whatsapp-fill" style="color: #25D366;"></i> WhatsApp</h3>
+                <p>Chat Instantly</p>
+            </a>
+            </div>
+
+                <div class="contact-form-card">
+                    <h2>Send Us a Message</h2>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="contactName" placeholder="Your name" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="contactEmail" placeholder="your@email.com" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="contactMessage" rows="5" placeholder="How can we help?" class="form-textarea"></textarea>
+                    </div>
+                    <button class="btn btn-primary" onclick="handleContactSubmit()">Send Message</button>
+                    <p id="contactStatus" class="contact-status"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Alankar Janawalekar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple contact form handler (demo only)
+        function handleContactSubmit() {
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const message = document.getElementById('contactMessage').value;
+            const status = document.getElementById('contactStatus');
+
+            if (!name || !email || !message) {
+                status.textContent = 'Please fill in all fields';
+                status.style.color = '#e74c3c';
+                return;
+            }
+
+            // In a real app, this would send to a server
+            status.textContent = 'Thank you! We\'ll get back to you soon.';
+            status.style.color = '#00c2a8';
+
+            // Clear form
+            document.getElementById('contactName').value = '';
+            document.getElementById('contactEmail').value = '';
+            document.getElementById('contactMessage').value = '';
+        }
+    </script>
+</body>
+</html>
