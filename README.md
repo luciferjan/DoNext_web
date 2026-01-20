@@ -2,7 +2,7 @@
 
 DoNext is a dark minimalist task management web application designed around clarity, speed, and intention.  
 It removes unnecessary complexity and focuses on what matters most — helping you get things done without distraction.
-
+https://luciferjan.github.io/DoNext_web/
 ---
 
 ## ✨ Philosophy
